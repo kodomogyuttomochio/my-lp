@@ -3,145 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>仕事をサボるための完璧なガイド</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
-            background: #f0f2f5;
-            color: #333;
-        }
-        .container {
-            width: 85%;
-            max-width: 900px;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px 0;
-        }
-        header {
-            background: #f1c40f;
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-        }
-        header p {
-            font-size: 1.2rem;
-        }
-        .main {
-            padding: 30px;
-            background: #fff;
-            margin-top: 25px;
-            border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-        }
-        h2 {
-            color: #f1c40f;
-            border-bottom: 2px solid #f0f2f5;
-            padding-bottom: 10px;
-            font-size: 1.8rem;
-        }
-        .section {
-            margin-bottom: 25px;
-        }
-        .section h3 {
-            background: #f39c12;
-            color: #fff;
-            padding: 12px 15px;
-            border-radius: 5px;
-            margin-top: 0;
-        }
-        .section p, .section ul {
-            padding: 0 15px;
-        }
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        ul li {
-            background: #fef9e7;
-            margin-bottom: 8px;
-            padding: 10px;
-            border-left: 4px solid #f1c40f;
-            border-radius: 4px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-            color: #888;
-            font-size: 0.9rem;
-        }
-    </style>
+    <title>仕事から逃げろ！</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>生産性を下げるための完璧なサボり方ガイド</h1>
-            <p>（あなたのキャリアを停滞させる、プロのサボり技術）</p>
+    <div id="game-container">
+        <div id="ui-bar">
+            <span>Lives: <span id="lives">❤️❤️❤️</span></span>
+            <span>Score: <span id="score">0</span></span>
         </div>
-    </header>
-
-    <div class="container">
-        <div class="main">
-            <div class="section">
-                <h2>警告：決して実践してはいけない、破滅への道</h2>
-                <p>
-                    このガイドは、いかにして評価を下げ、信頼を失い、キャリアの機会を逃すかを示すためのものです。ここに書かれていることは、生産的な社会人が<strong>絶対に避けるべき行動</strong>のリストです。自己成長を目指す方は、これらの逆を行ってください。
-                </p>
+        <canvas id="game-canvas"></canvas>
+        <div id="game-over-screen" class="hidden">
+            <h2>Game Over</h2>
+            <p>Your Score: <span id="final-score">0</span></p>
+            <div id="ranking-form">
+                <input type="text" id="player-name" placeholder="Enter your name (e.g., John Doe)" maxlength="30">
+                <button id="save-score-button">Save Score</button>
             </div>
-
-            <div class="section">
-                <h3>第一章：見せかけの多忙術</h3>
-                <p>常に忙しそうに見せることで、新たな仕事を振られるのを防ぎます。</p>
-                <ul>
-                    <li>常に複数のウィンドウを開いておき、誰かが近づいたら瞬時に仕事関連の画面に切り替える。</li>
-                    <li>時折、深刻な顔でため息をつき、キーボードを力強く叩く。</li>
-                    <li>重要そうな書類（中身は白紙でも可）を持ち、早足でオフィスを歩き回る。</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h3>第二章：会議を無力化する技術</h3>
-                <p>会議はサボりのための最高の舞台です。時間を浪費させ、何も決まらないように仕向けましょう。</p>
-                <ul>
-                    <li>議題とは関係のない、些細な質問を投げかけて議論を脱線させる。</li>
-                    <li>「一旦持ち帰って検討します」と言い、決してフォローアップしない。</li>
-                    <li>オンライン会議ではカメラをオフにし、別の作業に集中する。</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h3>第三章：デジタル隠れ蓑術</h3>
-                <p>テクノロジーを言い訳に使い、反応の遅さを正当化します。</p>
-                <ul>
-                    <li>メールの返信は意図的に遅らせ、「他の作業に集中していました」と言い訳する。</li>
-                    <li>「PCの動作が重くて」「ファイルが同期中で」など、もっともらしい技術的な問題を頻繁に報告する。</li>
-                    <li>チャットツールは常に「取り込み中」ステータスにしておく。</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h3>第四章：責任転嫁の達人になる</h3>
-                <p>自分のタスクを他人のせいにすることで、責任から逃れ続けます。</p>
-                <ul>
-                    <li>「〇〇さんからの返事待ちです」を魔法の言葉として使う。</li>
-                    <li>問題が発生したら、真っ先に「私の担当範囲ではない」と宣言する。</li>
-                    <li>関係者全員をCCに入れてメールを送り、誰がボールを持っているのか曖昧にする。</li>
-                </ul>
-            </div>
+            <button id="restart-button" class="hidden">Restart</button>
+            <h3>Ranking</h3>
+            <ul id="ranking-list"></ul>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2025 キャリア自滅防止協議会（架空）</p>
-        <p>このガイドは、キャリアアップを目指すすべてのビジネスパーソンのための反面教師です。</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
